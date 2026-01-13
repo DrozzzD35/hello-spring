@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ru.nikita.lesson1.work_13_01_2026.part1.MyConfigurationProperties;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,14 +15,17 @@ public class DeliveryController {
     private final DeliveryService service;
     private final DeliveryCalculator expressService;
     private final List<DeliveryCalculator> calculators;
+    private final MyConfigurationProperties properties;
 
-    public DeliveryController(@Qualifier("expressDeliveryCalculator") DeliveryCalculator expressService
-            , DeliveryService service
-            , List<DeliveryCalculator> calculators) {
+    public DeliveryController(@Qualifier("expressDeliveryCalculator") DeliveryCalculator expressService,
+                              DeliveryService service,
+                              List<DeliveryCalculator> calculators,
+                              MyConfigurationProperties properties) {
 
         this.service = service;
         this.expressService = expressService;
         this.calculators = calculators;
+        this.properties = properties;
     }
 
     @GetMapping("/delivery/calculate")
