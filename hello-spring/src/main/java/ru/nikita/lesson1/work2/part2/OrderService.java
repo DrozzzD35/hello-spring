@@ -12,7 +12,7 @@ public class OrderService {
         this.userService = userService;
     }
 
-    public String createOrder(Long id){
+    public String createOrder(Long id) {
         User user = userService.getUser(id);
         // логика формирования отчета
         return "Отчет сформирован для пользователя " + user.getId();
