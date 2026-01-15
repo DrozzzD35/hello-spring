@@ -13,8 +13,8 @@ import java.time.Duration;
 public class ApiClientConfig {
 
     @Bean
-    public RestTemplate template(RestTemplateBuilder builder,
-                                 WeatherProperties properties) {
+    public RestTemplate restTemplate(RestTemplateBuilder builder,
+                                     WeatherProperties properties) {
 
         return builder
                 .connectTimeout(Duration.ofMillis(properties.getConnect()))

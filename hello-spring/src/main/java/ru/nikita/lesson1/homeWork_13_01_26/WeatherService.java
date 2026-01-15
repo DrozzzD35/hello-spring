@@ -1,18 +1,17 @@
 package ru.nikita.lesson1.homeWork_13_01_26;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class WeatherService {
-    private final RestTemplate template;
+    private final WeatherClient client;
 
-    public WeatherService(RestTemplate template) {
-        this.template = template;
+    public WeatherService(WeatherClient client) {
+        this.client = client;
     }
 
     public String getWeather(String city) {
-        return template.getForObject("https://api.ru/weather?city=" + city, String.class);
+        return client.getWeather(city);
     }
 
 }
