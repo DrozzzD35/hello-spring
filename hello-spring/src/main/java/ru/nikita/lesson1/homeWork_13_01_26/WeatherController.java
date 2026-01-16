@@ -13,7 +13,7 @@ public class WeatherController {
     }
 
     @GetMapping("/weather")
-    public String getWeatherInCity(@RequestParam("city") String city) {
+    public String getWeatherInCity(@RequestParam String city) {
         return service.getWeather(city);
     }
 
