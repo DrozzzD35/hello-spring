@@ -15,7 +15,7 @@ public class HttpWeatherClient implements WeatherClient {
 
     @Override
     public String getWeather(String city) {
-        return template.getForObject("https://api.ru/weather?city=" + city, String.class);
+        return template.getForObject("https://testApi.ru/weather?city=" + city, String.class);
     }
 
 }
