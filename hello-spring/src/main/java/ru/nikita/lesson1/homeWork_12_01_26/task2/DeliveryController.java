@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.nikita.lesson1.work_13_01_2026.part1.MyConfigurationProperties;
+import ru.nikita.lesson1.work_13_01_2026_CONFIG.part1.MyConfigurationProperties;
 
 import java.util.HashMap;
 import java.util.List;

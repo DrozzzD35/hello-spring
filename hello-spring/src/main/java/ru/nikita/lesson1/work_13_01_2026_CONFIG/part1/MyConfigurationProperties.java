@@ -1,4 +1,4 @@
-package ru.nikita.lesson1.work_13_01_2026.part1;
+package ru.nikita.lesson1.work_13_01_2026_CONFIG.part1;
 
 
 import org.springframework.beans.factory.annotation.Value;
