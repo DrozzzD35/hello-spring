@@ -5,11 +5,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.logging.Logger;
+
 @RestController
-public class cacheController {
+public class CacheController {
     private final CacheService service;
 
-    public cacheController(CacheService service) {
+    public CacheController(CacheService service) {
+        Logger log = Logger.getGlobal();
+        log.info("Внедрение зависимости");
         this.service = service;
     }
 
