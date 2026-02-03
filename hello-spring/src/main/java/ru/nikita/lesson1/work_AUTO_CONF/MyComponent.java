@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+import java.sql.SQLException;
 
 @Component
 public class MyComponent {
@@ -11,7 +12,7 @@ public class MyComponent {
     @Autowired
     DataSource dataSource;
 
-    public MyComponent() {
+    public MyComponent() throws SQLException {
         this.dataSource.getConnection();
     }
 }
