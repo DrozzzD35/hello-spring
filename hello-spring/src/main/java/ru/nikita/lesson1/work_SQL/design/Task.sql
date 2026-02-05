@@ -54,6 +54,19 @@ CREATE TABLE changeHistory
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE tags
+(
+    id   SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE tags_projects
+(
+    project_id INT REFERENCES projects (id) ON DELETE CASCADE,
+    tags_id    INT REFERENCES tags (id) ON DELETE CASCADE,
+    PRIMARY KEY (project_id, tags_id)
+);
+
 CREATE INDEX idx_roles_name ON role (name);
 CREATE INDEX idx_users_name ON users (user_name);
 CREATE INDEX idx_users_email ON users (email);
