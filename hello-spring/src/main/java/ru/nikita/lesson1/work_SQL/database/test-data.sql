@@ -219,7 +219,7 @@ VALUES
 
     -- Комментарии к посту 4 (Базы данных)
     (4, 'DB Admin', 'JPA не всегда оптимален для сложных запросов', NOW() - INTERVAL '9 days'),
-    (4, 'Hibernate User', 'N+1 - моя боль', NOW() - INTERVAL '8 days'),
+    (4, 'Hibernate Product', 'N+1 - моя боль', NOW() - INTERVAL '8 days'),
 
     -- Комментарии к посту 6 (React Hooks)
     (6, 'React Newbie', 'useEffect сложно понять с первого раза', NOW() - INTERVAL '27 days'),
@@ -232,11 +232,11 @@ VALUES
 
     -- Комментарии к посту 10 (Docker)
     (10, 'DevOps Beginner', 'Наконец-то понял разницу между image и container!', NOW() - INTERVAL '21 days'),
-    (10, 'Podman User', 'А что скажете про Podman?', NOW() - INTERVAL '20 days'),
+    (10, 'Podman Product', 'А что скажете про Podman?', NOW() - INTERVAL '20 days'),
     (10, 'Docker Fan', 'Docker Compose - лучшее изобретение', NOW() - INTERVAL '19 days'),
 
     -- Комментарии к посту 11 (CI/CD)
-    (11, 'GitHub User', 'Actions - это бомба!', NOW() - INTERVAL '11 days'),
+    (11, 'GitHub Product', 'Actions - это бомба!', NOW() - INTERVAL '11 days'),
     (11, 'GitLab Fan', 'GitLab CI тоже неплох', NOW() - INTERVAL '10 days'),
 
     -- Комментарии к посту 12 (Kubernetes)

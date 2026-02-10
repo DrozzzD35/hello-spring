@@ -24,7 +24,7 @@ class OrderService {
 
     public void process(){
 //        user.add()
-        // User user = user.getObj()
+        // Product user = user.getObj()
     }
 }
 
