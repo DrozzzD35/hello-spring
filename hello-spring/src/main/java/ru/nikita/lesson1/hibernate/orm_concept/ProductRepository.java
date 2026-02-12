@@ -24,7 +24,6 @@ public class ProductRepository {
         }
     }
 
-
     public Optional<Product> findById(Long id) {
         Product product = entityManager.find(Product.class, id);
         return Optional.ofNullable(product);
@@ -70,7 +69,7 @@ public class ProductRepository {
 
         // Связан с бд
         entityManager.persist(product);
-        product.setPrice(new BigDecimal("5000")); //измкенения отслеживаются
+        product.setPrice(new BigDecimal("5000")); //изм енения отслеживаются
 
 
         // Отвязан с бд
