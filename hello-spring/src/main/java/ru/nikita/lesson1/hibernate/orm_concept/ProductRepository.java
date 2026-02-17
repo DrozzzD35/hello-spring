@@ -69,7 +69,7 @@ public class ProductRepository {
 
         // Связан с бд
         entityManager.persist(product);
-        product.setPrice(new BigDecimal("5000")); //изм енения отслеживаются
+        product.setPrice(new BigDecimal("5000")); //изменения отслеживаются
 
 
         // Отвязан с бд
